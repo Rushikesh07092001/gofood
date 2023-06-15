@@ -14,6 +14,12 @@ app.use((req, res, next) => {
     );
     next();
 });
+app.use(express.json())
+
+app.get('/', (req, res) => {
+    res.send('Hello World!')
+})
+
 mongoDB();
 
 // app.use(express.static(path.join(__dirname, './client/build')))
