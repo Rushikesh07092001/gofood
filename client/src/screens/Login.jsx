@@ -17,7 +17,7 @@ const PostData = async(e)=>{
   e.preventDefault();
   const {email,password}=user;
 
-  const res = await fetch("http://localhost:5000/api/login",{
+  const res = await fetch("https://gofood-mjiz.onrender.com/api/login",{
     method:"POST",
     headers:{
       "Content-Type" : "application/json"
