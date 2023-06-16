@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import { NavLink,json,useNavigate} from 'react-router-dom'
+import Navbar from '../componets/Navbar'
 export default function Login() {
   const [user,setUser]= useState({
     email:"",password:""
@@ -49,10 +50,12 @@ const PostData = async(e)=>{
 
 }
   return (
+    <div style={{backgroundImage: 'url("https://images.pexels.com/photos/326278/pexels-photo-326278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")', height: '100vh', backgroundSize: 'cover' }}>
+    <div>
+      <Navbar />
+    </div>
     <div className='container'>
-    <div className='signupForm'>
-      <h2 className='form-title'>sign in</h2>
-      <form method="POST" className='register-form' id='register-form'>
+    <form method="POST" className='register-form' id='register-form'>
         
        
         <div className="mb-3">
@@ -70,6 +73,8 @@ const PostData = async(e)=>{
         <NavLink to="/creatuser" className="signup btn btn-danger ">New user</NavLink>
       </form>
     </div>
-  </div>
+    </div>
+  
+  
   )
 }
