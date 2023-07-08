@@ -34,7 +34,7 @@ const PostData = async(e)=>{
   const data = await res.json();
   if (data.success) {
     //save the auth toke to local storage and redirect
-    localStorage.setItem('token', data.authToken)
+    localStorage.setItem('authToken', data.authToken)
     navigate("/login")
 
   }
