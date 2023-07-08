@@ -5,7 +5,7 @@ export default function MyOrder() {
     const [orderData, setorderData] = useState({})
 
     const fetchMyOrder = async () => {
-        console.log(localStorage.getItem('userEmail'))
+        console.log(localStorage.getItem('usermail'))
         await fetch("https://gofood-mjiz.onrender.com/api/myOrderData", {
             // credentials: 'include',
             // Origin:"http://localhost:3000/login",
@@ -14,7 +14,7 @@ export default function MyOrder() {
                 'Content-Type': 'application/json'
             },
             body:JSON.stringify({
-                email:localStorage.getItem('userEmail')
+                email:localStorage.getItem('usermail')
             })
         }).then(async (res) => {
             let response = await res.json()

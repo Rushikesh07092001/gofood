@@ -19,7 +19,7 @@ export default function Cart(props){
     //   }
 
     const handleCheckOut = async () => {
-      let userEmail = localStorage.getItem("userEmail");
+      let userEmail = localStorage.getItem("usermail");
       
       let response = await fetch("https://gofood-mjiz.onrender.com/api/OrderData", {
        
